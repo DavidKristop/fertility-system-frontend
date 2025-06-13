@@ -20,11 +20,11 @@ export default function RegisterForm({ formik }: RegisterFormProps) {
             type="tel"
             {...formik.getFieldProps('phone')}
             className={`mt-1 w-full bg-gray-100 ${
-              formik.touched.phone && formik.errors.phone ? 'border-red-500' : ''
+              formik.touched.username && formik.errors.username? 'border-red-500' : ''
             }`}
           />
-          {formik.touched.phone && formik.errors.phone && (
-            <div className="text-red-500 text-sm mt-1">{formik.errors.phone}</div>
+          {formik.touched.username && formik.errors.username && (
+            <div className="text-red-500 text-sm mt-1">{formik.errors.username}</div>
           )}
         </div>
 
