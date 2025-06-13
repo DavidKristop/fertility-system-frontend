@@ -1,15 +1,15 @@
 export interface LoginRequest {
-    phone: string;
+    username: string;
     password: string;
 }
 
 export interface RegisterRequest extends LoginRequest {
+    email: string;
     confirmPassword: string;
 }
 
 export interface AuthResponse {
     token: string;
-    user: UserProfile;
 }
 
 export interface UserProfile {

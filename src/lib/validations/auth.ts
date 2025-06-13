@@ -4,7 +4,7 @@ const phoneRegex = /^[0-9]+$/;
 const passwordRegex = /^[A-Z]/;
 
 export const loginSchema = z.object({
-  phone: z.string({
+  username: z.string({
     required_error: "Số điện thoại là bắt buộc",
   })
     .regex(phoneRegex, "Số điện thoại chỉ chứa các chữ số")
@@ -19,6 +19,9 @@ export const loginSchema = z.object({
 });
 
 export const registerSchema = loginSchema.extend({
+  email: z.string({
+    required_error: "Email là bắt buộc"
+  }),
   confirmPassword: z.string({
     required_error: "Xác nhận mật khẩu là bắt buộc",
   })
