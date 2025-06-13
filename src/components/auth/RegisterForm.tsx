@@ -16,7 +16,7 @@ export default function RegisterForm({ formik }: RegisterFormProps) {
             Số điện thoại
           </Label>
           <Input
-            id="phone"
+            id="username"
             type="tel"
             {...formik.getFieldProps('phone')}
             className={`mt-1 w-full bg-gray-100 ${
